@@ -1,0 +1,69 @@
+.sort-by {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 39px 20px 24px 0;
+  font-size: 18px;
+
+  @include tablet {
+    padding: 25px 20px 10px 0;
+  }
+
+  @include mobile-l {
+    font-size: 16px;
+  }
+}
+
+.sort-by__title {
+  margin-right: 48px;
+  font-weight: 700;
+
+  @include mobile-l {
+    width: 100%;
+    margin-right: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+.sort-by__type {
+  margin-bottom: 15px;
+  color: $color-black;
+  position: relative;
+  transition: color 0.3s linear;
+
+  &:hover {
+    color: $color-red;
+
+    .sort-by__icon {
+      fill: $color-red;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--up {
+    .sort-by__icon {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &:not(:first-of-type) {
+    margin-left: 85px;
+  }
+
+  @include mobile-l {
+    &:not(:first-of-type) {
+      margin-left: 60px;
+    }
+  }
+}
+
+.sort-by__icon {
+  position: absolute;
+  top: 50%;
+  right: -29px;
+  transform: translateY(-50%);
+  transition: fill 0.3s linear;
+}

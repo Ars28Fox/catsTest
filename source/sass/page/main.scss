@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__scroll-btn {
+  display: none;
+  position: fixed;
+  right: unquote("calc((100vw - 1180px) / 2)");
+  bottom: 40px;
+  width: 59px;
+  height: 59px;
+  margin: 0;
+  border: none;
+  padding: 0;
+  background-image: url("../../img/icon-up.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $color-aquamarine-blue;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+
+  &:hover {
+    background-color: $color-blue-mine;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  @include mobile-l {
+    width: 40px;
+    height: 40px;
+  }
+}

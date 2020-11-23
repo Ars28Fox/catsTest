@@ -1,0 +1,80 @@
+.header {
+  background-image: url("../img/header-bg.jpg"), linear-gradient(to right, $color-night-rider, $color-zeus);
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $color-white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 32, 33, 0.79);
+    z-index: 1;
+  }
+
+  @include tablet {
+    background-size: cover;
+    background-position: 30%;
+  }
+}
+
+.header__wrap {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 40px 0 66px;
+  z-index: 2;
+
+  @include tablet {
+    padding: 30px 0;
+  }
+
+  @include mobile-l {
+    padding: 20px 0;
+  }
+}
+
+.header__logo-link {
+  display: block;
+  position: relative;
+  margin-right: 110px;
+  z-index: 4;
+
+  @include mobile-l {
+    width: 55px;
+    margin-right: 20px;
+  }
+
+  @include mobile {
+    margin-right: auto;
+  }
+}
+
+.header__contacts {
+  margin-top: 10px;
+  margin-left: auto;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.header__cats-result {
+  width: 100%;
+  margin-top: 40px;
+  font-size: 38px;
+  font-weight: 700;
+
+  @include tablet {
+    margin-top: 30px;
+    width: 70%;
+  }
+
+  @include mobile-l {
+    width: 100%;
+    font-size: 24px;
+  }
+}
