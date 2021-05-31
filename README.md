@@ -4,7 +4,7 @@ Gulp tasks:
 * gulp start - starting dev
 * gulp build - compile prod
 
-[Project page](ars28fox.github.io/catstest/)
+[Project page](https://ars28fox.github.io/catsTest/)
 
 Написан на чистом html, использовался препроцессор scss, javascript и сборщик gulp.
 В ходе тестового задания было реализовано:
